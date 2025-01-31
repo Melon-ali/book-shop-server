@@ -8,7 +8,7 @@ const bookSchema = new Schema<TBook>(
     price: { type: Number, required: [true, 'Price is Required'] },
     category: {
       type: String,
-      enum: ['Deign', 'Development', 'Frameworks', 'DevOps', 'Apps'],
+      enum: ['Design', 'Development', 'Frameworks', 'DevOps', 'Apps'],
       required: [true, 'Category is Required'],
     },
     description: { type: String, required: [true, 'Description is Required'] },

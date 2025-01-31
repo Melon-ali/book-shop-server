@@ -4,7 +4,7 @@ export type TBook = {
   name: string;
   author: string;
   price: number;
-  category: 'Deign' | 'Development' | 'Frameworks' | 'DevOps' | 'Apps';
+  category: 'Design' | 'Development' | 'Frameworks' | 'DevOps' | 'Apps';
   description: string;
   quantity: number;
   inStock?: boolean;
@@ -12,6 +12,7 @@ export type TBook = {
 };
 
 export interface IBook extends Model<TBook> {
+  // eslint-disable-next-line no-unused-vars
   isBookExists(id: string): unknown;
   // eslint-disable-next-line no-unused-vars
   isBicycleExists(id: string): Promise<TBook>;
