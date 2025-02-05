@@ -14,7 +14,7 @@ const orderSchema = new Schema<TOrder>(
     },
     product: {
       type: Schema.Types.ObjectId,
-      ref: 'Bicycle',
+      ref: 'Book',
       required: true,
     },
     address: {

@@ -22,7 +22,7 @@ const bookSchema = new Schema<TBook>(
 bookSchema.statics.isBookExists = async function (
   id: string,
 ): Promise<TBook | null> {
-  return await BookModel.findOne({ _id: id });
+  return await BookModel.findById(id).select('quantity inStock');
 };
 
 export const BookModel = model<TBook, IBook>('Book', bookSchema);
